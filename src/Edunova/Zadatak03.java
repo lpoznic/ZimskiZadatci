@@ -17,14 +17,19 @@ public class Zadatak03 {
 			max=b;
 		}
 		
-		for(i=min ; i<max+1; i++) {
-			for(j=0 ; j<min+1; j++) {
-				if(i%j!=0) {
-				System.out.println(i);
-				}
-			}
+		
+		for(j=min;j<max+1;j++) {
+			boolean nprim = false;
+	        for(i = 2; i <= j/2; ++i)
+	        {
+	            if(j % i == 0)
+	            {
+	                nprim = true;
+	                break;
+	            }
+	        }
+	        if (!nprim)
+	            System.out.println(j + " je prim broj.");
 		}
-
 	}
-
 }
